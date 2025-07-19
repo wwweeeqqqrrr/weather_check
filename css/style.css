@@ -1,0 +1,157 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+#back {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.main {
+    border: 1px solid #e09660;
+    width: 90%;
+    max-width: 800px;
+    height: auto;
+    min-height: 40vh;
+    border-radius: 15px;
+    background: transparent;
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left:47%;
+    transform: translate(-50%, -50%);
+    backdrop-filter: blur(30px);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+.word {
+    font-family: main;
+    color: #C0C0C0;
+    display: flex;
+    justify-content: center;
+    font-size: 2.5rem; /* Используем rem вместо px */
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.container {
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 2rem auto;
+    position: relative;
+    border: 1px solid #C0C0C0;
+    border-radius: 10px;
+    height: auto;
+    min-height: 200px;
+    padding: 20px;
+}
+
+.main_button {
+    border: 1px solid transparent;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    font-size: 1.5rem;
+    font-family: main;
+    color: #FA8072;
+    background: #FFFFFF;
+    z-index: 1;
+    padding: 15px;
+    cursor: pointer;
+
+}
+.main_button {
+    font-size: 2.5rem;
+}
+
+#icon {
+    width: 80px;
+    height: 80px;
+
+}
+
+#country, #temp, #text {
+    font-size: 1.4rem;
+    color: #FA8072;
+}
+.info{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    font-family: main;
+
+
+}
+
+@media (min-width: 768px) {
+    .main {
+        width: 70%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .main {
+        width: 55%;
+    }
+}
+
+@media (max-width: 576px) {
+    .word {
+        font-size: 1.8rem;
+        margin-top: 1rem;
+    }
+
+    .container {
+        min-height: 150px;
+    }
+    .info{
+        display: block;
+
+    }
+    .main_button {
+        font-size: 1.2rem;
+    }
+
+    #icon {
+        width: 80px;
+        height: 80px;
+    }
+
+    #country, #temp, #text {
+        font-size: 1.2rem;
+    }
+
+    #country {
+        left: 100px;
+        top: 50px;
+    }
+
+    #temp {
+        left: 50%;
+        top: 120px;
+    }
+
+    #text {
+        right: 20px;
+        top: 120px;
+    }
+}
